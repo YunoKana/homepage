@@ -84,37 +84,36 @@ h1 {
     color: #e74c3c; /* 強調部分の色 */
 }
 
-/* 申し込みフォームのスタイル */
+/* フォームセクションのデザイン */
 .form-section {
-    padding: 20px;
     text-align: center;
+    margin: 40px 0;
 }
 
-form {
-    background-color: white;
-    padding: 30px;
-    margin: 0 auto;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-input, select, button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #4CAF50;
+.submit-button {
+    background-color: #4CAF50; /* 緑色 */
     color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+.submit-button:hover {
+    background-color: #45a049; /* ボタンをホバーしたとき */
+}
+
+.warning {
+    font-size: 1rem;
+    color: #ff0000;
+    margin-top: 15px;
 }
 
 /* 注意事項の赤字スタイル */
