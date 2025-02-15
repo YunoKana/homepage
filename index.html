@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YunoKana 東京案内サービス</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>YunoKana 東京案内サービス</h1>
+    </header>
+
+    <!-- サービス概要のセクション -->
+    <section class="overview-section">
+        <h2>サービス概要</h2>
+        <div class="overview-box">
+            <p><strong>東京に来たら</strong>、ぜひ私たち「YunoKana」に会って、素敵な思い出を作りませんか？<br>
+               私たちは、東京での観光をもっと楽しく、もっと特別なものにするために、<strong>3つの異なるプラン</strong>を用意しています。<br>
+               短い時間でも東京の魅力を感じ、長時間でもゆっくりと楽しむことができます。<br>
+               どのプランも、お客様一人ひとりに合わせたオーダーメイドな体験をご提供し、<strong>楽しい時間</strong>をお約束します！<br>
+               ぜひ、あなたの理想の東京旅行を一緒に作りましょう。
+            </p>
+        </div>
+    </section>
+
+    <!-- サービスプランのセクション -->
+    <section class="service-description">
+        <h2>サービスプラン</h2>
+
+        <!-- ミニマムプラン -->
+        <div class="service-plan">
+            <h3>ミニマムプラン（4万円） - 約2時間</h3>
+            <p>東京の街並みを楽しみながら、私たちと軽いランチまたはディナーを楽しんでみませんか？<br>
+                その後、少し東京を散歩しましょう！観光のスタートとして最適なプランです。</p>
+            <ul>
+                <li>私たちと軽いランチまたはディナー</li>
+                <li>東京の魅力的なエリアを散策</li>
+                <li>短時間で東京の雰囲気を楽しむ</li>
+            </ul>
+        </div>
+
+        <!-- スタンダードプラン -->
+        <div class="service-plan">
+            <h3>スタンダードプラン（8万円） - 約5時間</h3>
+            <p>東京を観光して、美味しいレストランでランチまたはディナーをお楽しみいただけます。<br>
+                私たちがあなたのペースでご案内するので、観光も食事もゆっくりと楽しめます！</p>
+            <ul>
+                <li>東京の代表的な観光地を巡る</li>
+                <li>美味しいレストランでランチまたはディナー</li>
+                <li>観光と食事をゆっくり楽しむ</li>
+            </ul>
+        </div>
+
+        <!-- プレミアムプラン -->
+        <div class="service-plan">
+            <h3>プレミアムプラン（30万円） - 1日貸切</h3>
+            <p>私たちと共に東京を1日中楽しみましょう！ディズニーで1日を過ごしたり、<br>
+                観光地巡りなど、あなたの希望に応じて、思い出に残る最高の体験をお届けします！</p>
+            <ul>
+                <li>1日中お客様の希望に合わせてアクティビティ</li>
+                <li>ディズニーや東京の観光地巡り</li>
+                <li>ご要望に応じて完全オーダーメイドな体験</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 申し込みフォームのセクション -->
+    <section class="form-section">
+        <h2>申し込みフォーム</h2>
+        <form action="mailto:yuno.kana.japan@gmail.com" method="post" enctype="text/plain">
+            <label for="nickname">ニックネーム:</label>
+            <input type="text" id="nickname" name="nickname" required>
+
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="plan">希望のプラン:</label>
+            <select id="plan" name="plan" required>
+                <option value="ミニマムプラン（4万円）">ミニマムプラン（4万円）</option>
+                <option value="スタンダードプラン（8万円）">スタンダードプラン（8万円）</option>
+                <option value="プレミアムプラン（30万円）">プレミアムプラン（30万円）</option>
+            </select>
+
+            <button type="submit">送信</button>
+        </form>
+        <p class="warning">※フォーム送信後、24時間以内に記載されたメールアドレスに返信いたします。</p>
+    </section>
+
+    <section>
+        <p>Youtubeチャンネル: <a href="https://www.youtube.com/channel/UCdNBoi4uvyZz_NRXZyv_YJA" target="_blank">YunoKana</a></p>
+    </section>
+</body>
+</html>
