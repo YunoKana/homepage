@@ -11,6 +11,35 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
+    display: flex;
+    align-items: center; /* アイコンと文字の縦位置を揃える */
+    justify-content: center; /* アイコンと文字の全体を中央に配置 */
+}
+
+header .icon {
+    width: 55px; /* アイコンのサイズを1.5倍に変更 */
+    height: 55px; /* アイコンのサイズを1.5倍に変更 */
+    border-radius: 50%;
+    background-color: #3498db; /* アイコンの背景色 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* アイコンと文字の間にスペース */
+    overflow: hidden; /* アイコンの画像がはみ出さないように */
+}
+
+header .icon img {
+    width: 100%; /* アイコンの丸に合わせて画像を広げる */
+    height: 100%;
+    object-fit: cover; /* 画像が丸に収まるようにトリミング */
+}
+
+header .text {
+    font-size: 24px;
+}
+
+.icon:hover {
+    background-color: #2980b9;
 }
 
 h1 {
@@ -19,24 +48,50 @@ h1 {
 }
 
 /* サービス概要のセクション */
-.overview-section {
-    padding: 20px;
+/* PRセクションのデザイン */
+.pr-section {
     text-align: center;
+    background-color: #fff8e1; /* 柔らかい背景色 */
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.overview-box {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 0 auto;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* PRタイトル */
+.pr-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5733; /* 鮮やかな赤色 */
+    margin-bottom: 20px;
 }
 
-.overview-box p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
+/* PRテキスト */
+.pr-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* ハイライト部分 */
+.highlight {
+    color: #ff9800; /* 鮮やかなオレンジ */
+    font-weight: bold;
+}
+
+/* 1日1組限定の強調 */
+.exclusive {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e91e63; /* 鮮やかなピンク */
+}
+
+/* 予約受付の強調 */
+.cta {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #008CBA; /* 鮮やかな青 */
 }
 
 /* サービスプランのセクション */
@@ -64,24 +119,89 @@ h1 {
 }
 
 /* サービスプランのリストセクション */
-.service-plan ul {
-    list-style-type: disc; /* 点を表示 */
-    list-style-position: inside; /* 点を文字の真左に配置 */
-    margin: 0; /* 左のインデントをゼロに */
-    padding: 0; /* パディングもゼロに */
-    font-size: 1rem;
-    color: #555;
-    max-width: 600px; /* リストの幅を設定 */
-    margin: 0 auto; /* 中央揃え */
+/* セクション全体 */
+.service-description {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
 }
 
-.service-plan li {
-    font-weight: bold; /* リストの文字を太字に */
-    margin-bottom: 10px; /* 各リストアイテムの間隔 */
+/* セクションタイトル */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5733;
+    margin-bottom: 30px;
 }
 
-.service-plan li strong {
-    color: #e74c3c; /* 強調部分の色 */
+/* プランのデザイン */
+.service-plan {
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 12px;
+    max-width: 700px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-left: 10px solid;
+}
+
+/* プランごとのカラー */
+.plan-minimum {
+    border-color: #4CAF50;
+}
+
+.plan-standard {
+    border-color: #FFC107;
+}
+
+.plan-premium {
+    border-color: #E91E63;
+}
+
+/* プランタイトル */
+.service-plan h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 料金表示 */
+.price {
+    font-size: 1.4rem;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* プランの説明 */
+.plan-description {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* プランのリスト */
+.plan-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.plan-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.plan-list li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #4CAF50;
 }
 
 /* フォームセクションのデザイン */
