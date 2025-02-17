@@ -89,6 +89,15 @@ h1 {
     color: #008CBA;
 }
 
+/* 小さなテキストのスタイル */
+.small-text {
+    font-size: 0.9rem; /* 少し小さく設定 */
+    color: red; /* 少し薄い色で目立ちすぎないように */
+    line-height: 1.6;
+    margin-top: 20px;
+    display: block;
+}
+
 /* サービスプランのセクション */
 .service-description {
     padding: 20px;
