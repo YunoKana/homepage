@@ -14,11 +14,12 @@ header {
     display: flex;
     align-items: center; /* アイコンと文字の縦位置を揃える */
     justify-content: center; /* アイコンと文字の全体を中央に配置 */
+    flex-wrap: wrap; /* アイコンと文字が折り返されるように */
 }
 
 header .icon {
-    width: 55px; /* アイコンのサイズを1.5倍に変更 */
-    height: 55px; /* アイコンのサイズを1.5倍に変更 */
+    width: 55px; /* アイコンのサイズ */
+    height: 55px; /* アイコンのサイズ */
     border-radius: 50%;
     background-color: #3498db; /* アイコンの背景色 */
     display: flex;
@@ -48,7 +49,6 @@ h1 {
 }
 
 /* サービス概要のセクション */
-/* PRセクションのデザイン */
 .pr-section {
     text-align: center;
     background-color: #fff8e1; /* 柔らかい背景色 */
@@ -59,39 +59,34 @@ h1 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* PRタイトル */
 .pr-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #ff5733; /* 鮮やかな赤色 */
+    color: #ff5733;
     margin-bottom: 20px;
 }
 
-/* PRテキスト */
 .pr-text {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #333;
 }
 
-/* ハイライト部分 */
 .highlight {
-    color: #ff9800; /* 鮮やかなオレンジ */
+    color: #ff9800;
     font-weight: bold;
 }
 
-/* 1日1組限定の強調 */
 .exclusive {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #e91e63; /* 鮮やかなピンク */
+    color: #e91e63;
 }
 
-/* 予約受付の強調 */
 .cta {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #008CBA; /* 鮮やかな青 */
+    color: #008CBA;
 }
 
 /* サービスプランのセクション */
@@ -107,8 +102,11 @@ h1 {
 .service-plan h3 {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #2c3e50; /* プラン名の強調 */
+    color: #2c3e50;
     font-weight: bold;
+    display: flex;
+    flex-wrap: wrap; /* テキストが折り返されるように */
+    justify-content: center;
 }
 
 .service-plan p {
@@ -118,15 +116,12 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* サービスプランのリストセクション */
-/* セクション全体 */
 .service-description {
     text-align: center;
     padding: 50px 20px;
     background-color: #f9f9f9;
 }
 
-/* セクションタイトル */
 .section-title {
     font-size: 2rem;
     font-weight: bold;
@@ -134,7 +129,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* プランのデザイン */
 .service-plan {
     background: white;
     padding: 30px;
@@ -146,7 +140,6 @@ h1 {
     border-left: 10px solid;
 }
 
-/* プランごとのカラー */
 .plan-minimum {
     border-color: #4CAF50;
 }
@@ -159,7 +152,6 @@ h1 {
     border-color: #E91E63;
 }
 
-/* プランタイトル */
 .service-plan h3 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -169,14 +161,12 @@ h1 {
     align-items: center;
 }
 
-/* 料金表示 */
 .price {
     font-size: 1.4rem;
     color: #007BFF;
     font-weight: bold;
 }
 
-/* プランの説明 */
 .plan-description {
     font-size: 1.2rem;
     color: #333;
@@ -184,7 +174,6 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* プランのリスト */
 .plan-list {
     list-style: none;
     padding: 0;
@@ -204,7 +193,6 @@ h1 {
     color: #4CAF50;
 }
 
-/* フォームセクションのデザイン */
 .form-section {
     text-align: center;
     margin: 40px 0;
@@ -216,7 +204,7 @@ h1 {
 }
 
 .submit-button {
-    background-color: #4CAF50; /* 緑色 */
+    background-color: #4CAF50;
     color: white;
     font-size: 1.2rem;
     padding: 10px 20px;
@@ -227,7 +215,7 @@ h1 {
 }
 
 .submit-button:hover {
-    background-color: #45a049; /* ボタンをホバーしたとき */
+    background-color: #45a049;
 }
 
 .warning {
@@ -236,10 +224,50 @@ h1 {
     margin-top: 15px;
 }
 
-/* 注意事項の赤字スタイル */
-.warning {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 10px;
-    font-weight: bold;
+/* スマホ対応のレスポンシブデザイン */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .service-plan h3 {
+        font-size: 1.3rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-plan p {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        margin-top: 5px;
+    }
+
+    .plan-description {
+        font-size: 1rem;
+    }
+
+    .plan-list {
+        font-size: 1rem;
+    }
+
+    .form-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .submit-button {
+        font-size: 1.1rem;
+    }
 }
