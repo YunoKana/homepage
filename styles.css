@@ -1,37 +1,52 @@
-/* ボタンのスタイル */
-.language-buttons {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    z-index: 10;
+/* ヘッダーの調整 */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* 縦方向に要素を並べる */
+    padding: 20px 0;
+    position: relative;
 }
 
+/* 言語切り替えボタンのスタイル */
+.language-buttons {
+    margin-top: 10px; /* タイトルとボタンの間に余白をつける */
+    text-align: center;
+}
+
+/* 言語切り替えボタン */
 .language-button {
-    background-color: #5c6bc0;  /* Soft blue background */
+    background-color: #5c6bc0;
     color: white;
     font-size: 16px;
     font-weight: bold;
     padding: 12px 24px;
-    border-radius: 25px;  /* Rounded edges */
+    border-radius: 25px;
     border: none;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .language-button:hover {
-    background-color: #3f51b5;  /* Darker blue on hover */
-    transform: translateY(-3px);  /* Slightly lift the button */
+    background-color: #3f51b5;
+    transform: translateY(-3px);
 }
 
-.language-button:focus {
-    outline: none;  /* Remove focus outline */
-}
-
-.language-button:active {
-    transform: translateY(1px);  /* Pressed effect */
-    background-color: #3949ab;  /* Even darker blue when clicked */
+/* ヘッダーの調整 */
+header {
+    position: relative; /* 言語切り替えボタンの absolute 配置を有効にする */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* 全体のスタイル */
@@ -269,7 +284,7 @@ h1 {
     margin-top: 15px;
 }
 
-/* スマホ対応のレスポンシブデザイン */
+
 /* スマホ対応のレスポンシブデザイン */
 @media (max-width: 768px) {
     body {
@@ -278,11 +293,13 @@ h1 {
         margin: 0 auto; /* 中央寄せ */
     }
 
+    /* ヘッダーを横いっぱいに広げる */
     header {
-        width: 100%; /* 横幅いっぱいに広げる */
-        margin: 0; /* 余白なし */
-        padding: 15px 0; /* 上下の余白を設定 */
-        background-color: #f8f8f8; /* 背景色を適用（お好みで変更） */
+        width: 100vw; /* ビューポート幅いっぱいに */
+        margin: 0;
+        padding: 15px 0; /* 上下の余白 */
+        background-color: #333; /* 背景色（お好みで変更） */
+        text-align: center;
     }
 
     header .icon {
@@ -294,9 +311,10 @@ h1 {
         font-size: 1.8rem;
     }
 
+    /* メインコンテンツに余白を設ける */
     .service-description,
     .form-section {
-        max-width: 600px; /* コンテンツの最大幅を制限 */
+        max-width: 600px; /* 最大幅を設定 */
         margin: 0 auto; /* 中央寄せ */
         padding: 15px;
         border-radius: 10px;
