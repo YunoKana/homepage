@@ -270,6 +270,7 @@ h1 {
 
     h1 {
         font-size: 1.8rem;
+        text-align: center; /* h1タグを中央揃えに追加 */
     }
 
     /* メインコンテンツ */
