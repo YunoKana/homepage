@@ -241,20 +241,29 @@ h1 {
     margin-top: 15px;
 }
 
-/* スマホ対応 */
 @media (max-width: 768px) {
-    body {
-        padding: 0 15px;
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
         max-width: 100%;
-        margin: 0 auto;
+        overflow-x: hidden;
     }
 
-    /* ヘッダー */
+    /* ヘッダーだけ横幅いっぱい */
     header {
         width: 100%;
         margin: 0;
         padding: 15px 0;
     }
+
+    /* pr-section の余白を正しく適用 */
+    .pr-section {
+        width:85%; /* モバイルでは90%から95%に調整 */
+        max-width: 600px; /* モバイルでの最大幅を600pxに */
+        padding: 20px; /* 余白を減らしてコンパクトに */
+    }
+
 
     header .icon {
         margin-right: 0;
@@ -264,27 +273,30 @@ h1 {
     /* ヘッダーの文字を中央揃え */
     header .text {
         width: 100%;
-        text-align: center !important; /* スマホでも中央寄せを強制 */
-        display: block; /* flex が適用されないように block にする */
+        text-align: center !important;
+        display: block;
     }
 
     h1 {
         font-size: 1.8rem;
-        text-align: center; /* h1タグを中央揃えに追加 */
+        text-align: center;
     }
 
     /* メインコンテンツ */
     .service-description,
     .form-section {
-        max-width: 600px;
+        max-width: 100%;
         margin: 0 auto;
         padding: 15px;
         border-radius: 10px;
+        overflow-x: hidden; /* 横スクロール防止 */
     }
 
     .service-plan {
+        max-width: 100%;
         padding: 15px;
         border-radius: 10px;
+        overflow-x: hidden;
     }
 
     .service-plan h3 {
