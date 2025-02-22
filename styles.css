@@ -2,10 +2,14 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* 横スクロールを防ぐ */
+    width: 100vw; /* スクロールを防ぐ */
+    overflow-x: hidden; /* 横スクロール防止 */
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+}
+
+body {
+    touch-action: manipulation;
 }
 
 /* 言語切り替え時のズーム防止 */
@@ -259,8 +263,9 @@ h1 {
 
     /* ヘッダーの文字を中央揃え */
     header .text {
-        text-align: center;
         width: 100%;
+        text-align: center !important; /* スマホでも中央寄せを強制 */
+        display: block; /* flex が適用されないように block にする */
     }
 
     h1 {
