@@ -277,10 +277,12 @@ h1 {
         max-width: 100%;
         margin: 0 auto; /* 中央寄せ */
     }
-    
+
     header {
-        flex-direction: column;
-        text-align: center;
+        width: 100%; /* 横幅いっぱいに広げる */
+        margin: 0; /* 余白なし */
+        padding: 15px 0; /* 上下の余白を設定 */
+        background-color: #f8f8f8; /* 背景色を適用（お好みで変更） */
     }
 
     header .icon {
@@ -292,9 +294,17 @@ h1 {
         font-size: 1.8rem;
     }
 
+    .service-description,
+    .form-section {
+        max-width: 600px; /* コンテンツの最大幅を制限 */
+        margin: 0 auto; /* 中央寄せ */
+        padding: 15px;
+        border-radius: 10px;
+    }
+
     .service-plan {
         padding: 15px;
-        border-radius: 10px; /* 角を少し丸める */
+        border-radius: 10px;
     }
 
     .service-plan h3 {
@@ -318,11 +328,6 @@ h1 {
 
     .plan-list {
         font-size: 1rem;
-    }
-
-    .form-section {
-        padding: 15px;
-        border-radius: 10px;
     }
 
     .form-section h2 {
